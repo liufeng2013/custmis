@@ -1,0 +1,27 @@
+<html t:type="layout" title="用户列表"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+	<style>
+		.table{border-collapse: collapse;}
+		.table td, table th{border:1px solid #999; padding:5px;}
+	</style>
+	
+	<t:pagelink page="crud/UserCreate">添加用户</t:pagelink>
+	<br/><br/>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">
+		<tr>
+			<th scope="col">id</th>
+			<th scope="col">用户名</th>
+			<th scope="col">年龄</th>
+			<th scope="col">时间</th>
+			<th scope="col">操作</th>
+		</tr>
+		<tr t:type="loop" t:source="users" t:value="user">
+			<td>${user.id}</td>
+			<td>${user.name}</td>
+			<td>${user.time}</td>
+			<td>${user.id}</td>
+			<td></td>
+		</tr>
+	</table>
+</html>

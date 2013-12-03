@@ -1,0 +1,13 @@
+<html t:type="layout" title="创建用户"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+	<t:form t:id="create">
+		姓名:<t:textfield t:id="name" value="user.name" t:validate="required"/>
+		<br/>
+		年龄:<t:textfield t:id="age" value="user.age" t:validate="required"/>
+		<br/>
+		<input type="submit" value="submit"/>
+		<br/>
+	</t:form>
+	<t:pagelink page="crud/userlist">返回用户列表</t:pagelink>
+</html>
