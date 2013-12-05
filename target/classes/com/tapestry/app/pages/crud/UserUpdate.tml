@@ -1,7 +1,8 @@
-<html t:type="layout" title="创建用户"
+<html t:type="layout" title="用户修改"
 	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
 	xmlns:p="tapestry:parameter">
-	<t:form t:id="create">
+	
+	<t:form t:id="update">
 		姓名:<t:textfield t:id="name" value="user.name" t:validate="required"/>
 		<br/>
 		年龄:<t:textfield t:id="age" value="user.age" t:validate="required"/>

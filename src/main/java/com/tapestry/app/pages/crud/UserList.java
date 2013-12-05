@@ -29,4 +29,10 @@ public class UserList {
 		sql.append("from User");
 		users = dao.findWithQuery(sql.toString());
 	}
+	
+	//单击eventlink执行删除操作
+	Object onDelete(Long id){
+		dao.deleteByID(User.class, id);
+		return this;
+	}
 }

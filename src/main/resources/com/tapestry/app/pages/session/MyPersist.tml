@@ -1,0 +1,11 @@
+<html t:type="layout" title="会话存储"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+    
+	您输入的值：${hello}<br/>
+	<form t:type="form">
+		<input t:type="textfield" t:id="hello" value="hello"/>
+		<input type="submit" value="提交"/>
+	</form>
+    
+</html>

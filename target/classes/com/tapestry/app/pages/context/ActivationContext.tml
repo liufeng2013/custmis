@@ -1,0 +1,16 @@
+<html t:type="layout" title="传值示例"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+	<a t:type="pagelink" t:page="context/activationcontext" t:context="literal:5">把5传递到ActivationContext页面</a><br/><br/><br/>
+	
+	<t:form t:id="form1">
+		<input t:type="textfield" t:id="strOne" value="strOne"/>
+		<input type="submit" value="传递strOne值"/>
+	</t:form>
+	
+	<t:form t:id="form2">
+		<input t:type="textfield" t:id="strTwo" value="strTwo"/>
+		<input type="submit" value="传递strTwo值"/>
+	</t:form>
+</html>

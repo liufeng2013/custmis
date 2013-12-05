@@ -19,9 +19,12 @@
 		<tr t:type="loop" t:source="users" t:value="user">
 			<td>${user.id}</td>
 			<td>${user.name}</td>
+			<td>${user.age}</td>
 			<td>${user.time}</td>
-			<td>${user.id}</td>
-			<td></td>
+			<td>
+				<t:pagelink page="crud/userupdate" t:context="${user.id}">修改</t:pagelink>
+				<t:eventlink t:event="delete" t:context="${user.id}">删除</t:eventlink>
+			</td>
 		</tr>
 	</table>
 </html>

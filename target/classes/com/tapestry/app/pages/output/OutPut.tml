@@ -1,0 +1,10 @@
+<html t:type="layout" title="输出示例"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+      
+      ${outOne}<br/><br/>
+      <t:output value="outOne" format="dateFormat"/><br/><br/>
+      ${outTwo}<br/><br/>
+      ${outThree}<br/><br/>
+      <t:outputraw value="${outThree}"/><br/><br/>
+</html>

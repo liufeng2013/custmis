@@ -1,0 +1,8 @@
+<html t:type="layout" title="组件示例"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+      
+      <a t:type="pagelink" t:page="index" href="#;">index</a><br/>
+      <t:pagelink page="index">index</t:pagelink><br/>
+      <a t:type="pagelink" t:id="myPage" href="#;">index</a><br/>
+</html>
