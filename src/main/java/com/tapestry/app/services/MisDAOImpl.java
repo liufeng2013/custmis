@@ -13,6 +13,7 @@ public class MisDAOImpl implements MisDAO {
 		this.session = session;
 	}
 
+	@SuppressWarnings("unchecked")
 	public <T, PK extends Serializable> T findByID(Class<T> type, PK id) {
 		return (T)session.get(type, id);
 	}
@@ -34,14 +35,17 @@ public class MisDAOImpl implements MisDAO {
 
 	@CommitAfter
 	public <T, PK extends Serializable> void deleteByID(Class<T> type, PK id) {
+		@SuppressWarnings("unchecked")
 		T t = (T)session.get(type, id);
 		session.delete(t);
 	}
 
+	@SuppressWarnings("unchecked")
 	public <T> List<T> findWithNameQuery(String queryName, int num) {
 		return session.createQuery(queryName).setMaxResults(num).list();
 	}
 
+	@SuppressWarnings("unchecked")
 	public <T> List<T> findWithQuery(String queryName) {
 		return session.createQuery(queryName).list();
 	}

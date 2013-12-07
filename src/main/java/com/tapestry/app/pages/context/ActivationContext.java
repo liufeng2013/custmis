@@ -4,8 +4,6 @@ import org.apache.log4j.Logger;
 import org.apache.tapestry5.annotations.PageActivationContext;
 import org.apache.tapestry5.annotations.Property;
 
-import com.tapestry.app.pages.crud.UserCreate;
-
 public class ActivationContext {
 	Logger logger = Logger.getLogger(ActivationContext.class);
 

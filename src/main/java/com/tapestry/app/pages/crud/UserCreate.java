@@ -10,7 +10,7 @@ import com.tapestry.app.entities.User;
 import com.tapestry.app.services.MisDAO;
 
 public class UserCreate {
-	Logger logger = Logger.getLogger(UserCreate.class);
+	Logger logger = Logger.getLogger(getClass());
 	
 	@Property
 	private User user;
@@ -31,7 +31,7 @@ public class UserCreate {
 			user.setTime(new Date());
 		}
 		logger.debug("user name:" + user.getName());
-		User temp = dao.create(user);
+		dao.create(user);
 		return UserList.class;
 	}
 }
