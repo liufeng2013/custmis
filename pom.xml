@@ -95,6 +95,11 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
         	<artifactId>freemarker</artifactId>
         	<version>2.3.19</version>
         </dependency>
+        <dependency>
+        	<groupId>org.apache.ant</groupId>
+        	<artifactId>ant</artifactId>
+        	<version>1.9.2</version>
+        </dependency>
         </dependencies>
     <build>
         <finalName>custmis</finalName>

@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="GBK"?>
 <?mso-application progid="Excel.Sheet"?>
 <Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
-	xmlns:o="urn:schemas-microsoft-com:office:office"
-	xmlns:x="urn:schemas-microsoft-com:office:excel"
-	xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
-	xmlns:html="http://www.w3.org/TR/REC-html40">
-	<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
-		<Author>fengliu.lf</Author>
-		<LastAuthor>fengLiu</LastAuthor>
-		<Created>2013-12-06T07:43:24Z</Created>
-		<Version>12.00</Version>
-	</DocumentProperties>
-	<ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-		<WindowHeight>9150</WindowHeight>
-		<WindowWidth>14940</WindowWidth>
-		<WindowTopX>360</WindowTopX>
-		<WindowTopY>270</WindowTopY>
-		<ProtectStructure>False</ProtectStructure>
-		<ProtectWindows>False</ProtectWindows>
-	</ExcelWorkbook>
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>${author}</Author>
+  <LastAuthor>${author}</LastAuthor>
+  <Created>${createdate}</Created>
+  <Version>12.00</Version>
+ </DocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>9150</WindowHeight>
+  <WindowWidth>14940</WindowWidth>
+  <WindowTopX>360</WindowTopX>
+  <WindowTopY>270</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
 	<Styles>
 		<Style ss:ID="Default" ss:Name="Normal">
 			<Alignment ss:Vertical="Bottom"/>
@@ -66,7 +66,7 @@
 		</Style>
 	</Styles>
 	<Worksheet ss:Name="${reportname}">
-		<Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="3515" x:FullColumns="1"
+		<Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="7514" x:FullColumns="1"
 			x:FullRows="1">
 			<Column ss:Width="78.75" ss:Span="6"/>
 			<Row>
@@ -100,13 +100,13 @@
 			</#list>
 			<Row>
 				<Cell ss:MergeAcross="1">
-					<Data ss:Type="String">制表人： 高莹</Data>
+					<Data ss:Type="String">${tablefoot.staff}</Data>
 				</Cell>
 				<Cell ss:MergeAcross="1">
-					<Data ss:Type="String">制表部门： 山东省分公司</Data>
+					<Data ss:Type="String">${tablefoot.depart}</Data>
 				</Cell>
 				<Cell ss:MergeAcross="2">
-					<Data ss:Type="String">制表日期： 2013-12-06</Data>
+					<Data ss:Type="String">${tablefoot.date}</Data>
 				</Cell>
 			</Row>
 		</Table>
