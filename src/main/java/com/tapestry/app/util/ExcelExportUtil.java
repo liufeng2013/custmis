@@ -25,6 +25,14 @@ public class ExcelExportUtil {
 	private static ExcelExportUtil excelExportUtil = null;
 	private Configuration cfg = null;
 
+	public static String getPath(String type) {
+		if ("1".equals(type))
+			return "export";
+		if ("2".equals(type))
+			return "temp";
+		return null;
+	}
+
 	// 通过freeMarker模板生成目标信息
 	private ExcelExportUtil() {
 		cfg = new Configuration();
@@ -146,7 +154,7 @@ public class ExcelExportUtil {
 		return false;
 	}
 
-	// 生成临时文件/文件夹名
+	// 生成临时文件/文件夹名(确保不重复)
 	public static String getUniqeName() throws Exception {
 		return String.valueOf(System.currentTimeMillis())
 				+ Math.abs(new Random().nextInt());

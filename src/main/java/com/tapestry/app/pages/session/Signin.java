@@ -3,6 +3,9 @@ package com.tapestry.app.pages.session;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.annotations.SessionState;
 
+import com.tapestry.app.annotations.AnonymousAccess;
+
+@AnonymousAccess
 public class Signin {
 
 	@Property

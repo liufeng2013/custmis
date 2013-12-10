@@ -3,7 +3,9 @@
       xmlns:p="tapestry:parameter">
     
     <t:form t:id="signin">
-    	
+    	用户名：<input t:type="textfield" t:id="userName" value="userName"/><br/>
+    	密    码：<input t:type="textfield" t:id="password" value="password"/><br/>
+    	<input type="submit" value="登录"/>
     </t:form>
     
 </html>

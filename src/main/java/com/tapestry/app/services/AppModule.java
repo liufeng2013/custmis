@@ -11,9 +11,12 @@ import org.apache.tapestry5.ioc.MappedConfiguration;
 import org.apache.tapestry5.ioc.MethodAdviceReceiver;
 import org.apache.tapestry5.ioc.OrderedConfiguration;
 import org.apache.tapestry5.ioc.ServiceBinder;
+import org.apache.tapestry5.ioc.annotations.Contribute;
 import org.apache.tapestry5.ioc.annotations.Local;
 import org.apache.tapestry5.ioc.annotations.Match;
 import org.apache.tapestry5.ioc.annotations.SubModule;
+import org.apache.tapestry5.services.ComponentRequestFilter;
+import org.apache.tapestry5.services.ComponentRequestHandler;
 import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.RequestFilter;
 import org.apache.tapestry5.services.RequestHandler;
@@ -21,6 +24,8 @@ import org.apache.tapestry5.services.Response;
 import org.apache.tapestry5.upload.services.UploadModule;
 import org.apache.tapestry5.upload.services.UploadSymbols;
 import org.slf4j.Logger;
+
+import com.tapestry.app.security.AuthenticationFilter;
 
 /**
  * This module is automatically included as part of the Tapestry IoC Registry, it's a good place to
@@ -132,4 +137,10 @@ public class AppModule
 
         configuration.add("Timing", filter);
     }
+    
+    @Contribute(ComponentRequestHandler.class)
+   	public static void contributeComponentRequestHandler(
+   			OrderedConfiguration<ComponentRequestFilter> configuration) {
+   		configuration.addInstance("RequiresLogin", AuthenticationFilter.class);
+   	}
 }

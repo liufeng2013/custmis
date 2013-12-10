@@ -2,9 +2,15 @@ package com.tapestry.app.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 public class MysqlUtils {
 
@@ -48,19 +54,56 @@ public class MysqlUtils {
 
 	}
 
-	public ResultSet executeQuery(String sql) {// 数据库的查询操作
+	public ResultSet executeQuery(String sql, Map param) throws Exception {// 数据库的查询操作
 		ResultSet rs;
-		try {
-			if (con == null) {
-				creatConnection();
-			}
-			Statement s = con.createStatement();
-			rs = s.executeQuery(sql);
-			return rs;
-		} catch (Exception e) {
-			return null;
-		}
 
+		if (con == null) {
+			creatConnection();
+		}
+		PreparedStatement s = con.prepareStatement(sql);
+		s.setInt(1, Integer.parseInt(param.get("MIN_NUM").toString()));
+		s.setInt(2, Integer.parseInt(param.get("MAX_NUM").toString()));
+
+		rs = s.executeQuery();
+
+		return rs;
+	}
+	
+	public ResultSet executeQuery(String sql) throws Exception{
+		ResultSet rs;
+		
+		if(con == null){
+			creatConnection();
+		}
+		Statement s = con.createStatement();
+		rs = s.executeQuery(sql);
+		
+		return rs;
+	}
+
+	// 返回List型数据
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public List queryList(String sql, Map param) throws Exception {
+		List list = new ArrayList();
+
+		ResultSet rs = executeQuery(sql, param);
+		// 封装输出到序列
+		while (rs.next()) {
+			ResultSetMetaData rsm = rs.getMetaData();
+
+			Map info = new LinkedHashMap(); // 使用LinkedHashMap确保字段顺序不变
+			for (int i = 1; i <= rsm.getColumnCount(); i++) {
+				String name = rsm.getColumnName(i).toUpperCase();
+				int type = rsm.getColumnType(i);
+				info.put(name,
+						type == 2004 ? rs.getBlob(name) : rs.getString(name));
+			}
+
+			list.add(info);
+		}
+		rs.getStatement().close();
+
+		return list;
 	}
 
 	public void closeConnection() {// 关闭数据库连接
