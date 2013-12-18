@@ -2,8 +2,6 @@ package com.tapestry.app.security;
 
 import java.io.IOException;
 
-import mx4j.tools.config.DefaultConfigurationBuilder.Register;
-
 import org.apache.tapestry5.Link;
 import org.apache.tapestry5.runtime.Component;
 import org.apache.tapestry5.services.ComponentEventRequestParameters;
@@ -15,6 +13,7 @@ import org.apache.tapestry5.services.PageRenderRequestParameters;
 import org.apache.tapestry5.services.Response;
 
 import com.tapestry.app.annotations.AnonymousAccess;
+import com.tapestry.app.pages.Register;
 import com.tapestry.app.pages.crud.UserList;
 import com.tapestry.app.pages.session.Signin;
 import com.tapestry.app.services.Authenticator;
@@ -77,7 +76,7 @@ public class AuthenticationFilter implements ComponentRequestFilter
 
         if (page.getClass().isAnnotationPresent(AnonymousAccess.class)) { return false; }
         //返回登陆页面
-        Link link = renderLinkSource.createPageRenderLink("Signin");
+        Link link = renderLinkSource.createPageRenderLink("session/Signin");
 
         response.sendRedirect(link);
 

@@ -1,0 +1,8 @@
+<t:container
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+    
+	<t:form t:id="form" autoFocus="false">
+		<t:body/>
+	</t:form>
+</t:container>

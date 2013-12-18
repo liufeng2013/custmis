@@ -1,0 +1,9 @@
+<html t:type="layout" title="事件组件"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+	
+	<div style="#ff6600">${count}</div>
+	<t:eventlink t:event="add" t:context="literal:1">单击递增1,初始值为1</t:eventlink><br/>
+	<t:actionlink t:id="addTwo" t:context="literal:2">单击递增2,初始值为2</t:actionlink><br/>
+	<a href="#;" t:type="eventlink" t:event="clear">清除</a>
+</html>

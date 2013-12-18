@@ -1,0 +1,7 @@
+<html t:type="layout" title="表单验证2"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+	
+	姓名：${name}<br/>
+	<t:pagelink page="validator/validators1">返回</t:pagelink>
+</html>

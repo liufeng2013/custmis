@@ -1,134 +1,78 @@
-<?xml version="1.0" encoding="GBK"?>
-<?mso-application progid="Excel.Sheet"?>
-<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
- xmlns:o="urn:schemas-microsoft-com:office:office"
- xmlns:x="urn:schemas-microsoft-com:office:excel"
- xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
- xmlns:html="http://www.w3.org/TR/REC-html40">
- <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
-  <Author>${author}</Author>
-  <LastAuthor>${author}</LastAuthor>
-  <Created>${createdate}</Created>
-  <Version>12.00</Version>
- </DocumentProperties>
- <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>9150</WindowHeight>
-  <WindowWidth>14940</WindowWidth>
-  <WindowTopX>360</WindowTopX>
-  <WindowTopY>270</WindowTopY>
-  <ProtectStructure>False</ProtectStructure>
-  <ProtectWindows>False</ProtectWindows>
- </ExcelWorkbook>
-	<Styles>
-		<Style ss:ID="Default" ss:Name="Normal">
-			<Alignment ss:Vertical="Bottom"/>
-			<Borders/>
-			<Font ss:FontName="Arial" x:Family="Swiss"/>
-			<Interior/>
-			<NumberFormat/>
-			<Protection/>
-		</Style>
-		<Style ss:ID="s25">
-			<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
-			<Font ss:FontName="宋体" x:CharSet="134" ss:Size="14" ss:Bold="1"/>
-		</Style>
-		<Style ss:ID="s27">
-			<Alignment ss:Horizontal="Left" ss:Vertical="Center"/>
-			<Font ss:FontName="宋体" x:CharSet="134"/>
-		</Style>
-		<Style ss:ID="s28">
-			<Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
-			<Borders>
-				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
-					ss:Color="#000000"/>
-				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
-					ss:Color="#000000"/>
-				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
-					ss:Color="#000000"/>
-				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
-					ss:Color="#000000"/>
-			</Borders>
-			<Font ss:FontName="宋体" x:CharSet="134" ss:Bold="1"/>
-		</Style>
-		<Style ss:ID="s29">
-			<Alignment ss:Horizontal="Left" ss:Vertical="Center"/>
-			<Borders>
-				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
-					ss:Color="#000000"/>
-				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
-					ss:Color="#000000"/>
-				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
-					ss:Color="#000000"/>
-				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
-					ss:Color="#000000"/>
-			</Borders>
-			<Font ss:FontName="宋体" x:CharSet="134"/>
-		</Style>
-	</Styles>
-	<Worksheet ss:Name="${reportname}">
-		<Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="7514" x:FullColumns="1"
-			x:FullRows="1">
-			<Column ss:Width="78.75" ss:Span="6"/>
-			<Row>
-				<Cell ss:MergeAcross="6" ss:MergeDown="1" ss:StyleID="s25">
-					<Data
-						ss:Type="String">${reportname}</Data>
-				</Cell>
-			</Row>
-			<Row ss:Index="3">
-				<Cell ss:MergeAcross="6" ss:StyleID="s27">
-					<Data ss:Type="String">${info}</Data>
-				</Cell>
-			</Row>
-			<Row>
-				<#assign map = tablehead>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>${reportname}</x:Name><x:WorksheetOptions><x:Selected/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->
+    <style type="text/css">
+        .td
+        {
+            width: 100px;
+        }
+        .gdtjContainer .tb tr
+        {
+            text-align: center;
+            vertical-align: middle;
+        }
+        .gdtjContainer .tb th
+        {
+            border-left: 0.5pt solid #000;
+            border-right: 0.5pt solid #000;
+            border-bottom: 0.5pt solid #000;
+            text-align: center;
+            font-weight: normal;
+            font-size: 10pt;
+            middle: ;;height:15px;}
+        .gdtjContainer .header th
+        {
+            font-size: 12pt;
+        }
+        .gdtjContainer .tb tr th.noleftborder
+        {
+            border-left: none;
+        }
+        .gdtjContainer .tb tr th.rightborder
+        {
+            border-right: 0.5pt solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="gdtjContainer">
+        <table class="tb" cellspacing="0" cellpadding="0" border="0.5" width="70%">
+            <tr style="height: 40px">
+                <th style="font-size: 14pt; font-family: 宋体;" colspan="${tablehead?size}">
+                   <strong>${reportname}</strong>
+                </th>
+            </tr>
+            <tr>
+                <th style="text-align:left; font-size: 10pt; font-family: 宋体;" colspan="${tablehead?size}">
+                ${info}
+                </th>
+            </tr>
+            <tr>
+            	<#assign map = tablehead>
+            	<#list map?keys as key>
+                <th style="text-align: center; font-size: 10pt; border-left: none;">
+                    <strong>${map[key]}</strong>
+                </th>
+                </#list>
+            </tr>
+            <#list userlist as info>
+            <tr>
+            	<#assign map = info>
 				<#list map?keys as key>
-				<Cell ss:StyleID="s28">
-					<Data ss:Type="String">${map[key]}</Data>
-				</Cell>
+				<th style="text-align: left; font-size: 10pt; border-left: none;">
+                    ${map[key]}
+                </th>
 				</#list>
-			</Row>
-			<#list userlist as user>
-			<Row>
-				<#assign map = user>
-				<#list map?keys as key>
-				<Cell ss:StyleID="s29">
-					<Data ss:Type="String">${map[key]}</Data>
-				</Cell>
-				</#list>
-			</Row>
-			</#list>
-			<Row>
-				<Cell ss:MergeAcross="1">
-					<Data ss:Type="String">${tablefoot.staff}</Data>
-				</Cell>
-				<Cell ss:MergeAcross="1">
-					<Data ss:Type="String">${tablefoot.depart}</Data>
-				</Cell>
-				<Cell ss:MergeAcross="2">
-					<Data ss:Type="String">${tablefoot.date}</Data>
-				</Cell>
-			</Row>
-		</Table>
-		<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
-			<Print>
-				<FitWidth>0</FitWidth>
-				<FitHeight>0</FitHeight>
-				<ValidPrinterInfo/>
-				<PaperSizeIndex>9</PaperSizeIndex>
-				<HorizontalResolution>300</HorizontalResolution>
-				<VerticalResolution>300</VerticalResolution>
-			</Print>
-			<Selected/>
-			<Panes>
-				<Pane>
-					<Number>3</Number>
-					<ActiveRow>17</ActiveRow>
-					<ActiveCol>8</ActiveCol>
-				</Pane>
-			</Panes>
-			<ProtectObjects>False</ProtectObjects>
-			<ProtectScenarios>False</ProtectScenarios>
-		</WorksheetOptions>
-	</Worksheet>
-</Workbook>
+            </tr>
+            </#list>
+            <tr>
+                <th style="text-align:left; font-size: 10pt; font-family: 宋体;" colspan="${tablehead?size}">
+                ${tablefoot}
+                </th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

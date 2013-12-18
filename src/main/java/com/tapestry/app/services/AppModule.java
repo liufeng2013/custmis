@@ -43,6 +43,7 @@ public class AppModule
         // is provided inline, or requires more initialization than simply
         // invoking the constructor.
     	binder.bind(MisDAO.class, MisDAOImpl.class);
+    	binder.bind(Authenticator.class, BasicAuthenticator.class);
     }
 
     public static void contributeFactoryDefaults(
@@ -141,6 +142,6 @@ public class AppModule
     @Contribute(ComponentRequestHandler.class)
    	public static void contributeComponentRequestHandler(
    			OrderedConfiguration<ComponentRequestFilter> configuration) {
-   		configuration.addInstance("RequiresLogin", AuthenticationFilter.class);
+//   		configuration.addInstance("RequiresLogin", AuthenticationFilter.class);
    	}
 }

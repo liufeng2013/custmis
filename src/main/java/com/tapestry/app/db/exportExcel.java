@@ -58,13 +58,7 @@ public class exportExcel {
 			tableHead.put("TRADE_TYPE", "受理业务");
 
 			param.put("tablehead", tableHead);
-
-			Map<String, Object> tableFoot = new LinkedHashMap<String, Object>();
-			tableFoot.put("staff", "制表人： 高莹");// 制表人： 高莹
-			tableFoot.put("depart", "制表部门： 山东省分公司");// 制表部门： 山东省分公司
-			tableFoot.put("date", "制表日期： 2013-12-06");// 制表日期： 2013-12-06
-
-			param.put("tablefoot", tableFoot);
+			param.put("tablefoot", "制表人： 高莹   制表部门： 山东省分公司   制表日期： 2013-12-06");
 			
 			File temp = files[i];
 			List inList = null;

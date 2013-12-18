@@ -1,0 +1,17 @@
+<html t:type="layout" title="自定义表单验证1"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+	<style>
+		.error-msg{color:red}
+	</style>
+	
+	<form t:type="CustomForm">
+		<t:errors/>
+		姓:<input t:type="textField" t:id="firstName" value="firstName"/>
+		<t:CustomError for="firstName"/><br/>
+		名字：<input t:type="textField" t:id="lastName" value="lastName"/>
+		<t:CustomError for="lastName"/><br/>
+		<input type="submit" value="提交"/>
+	</form>
+</html>

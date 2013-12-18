@@ -5,7 +5,8 @@ import javax.security.sasl.AuthenticationException;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.Session;
-import org.flywind.app.entities.User;
+
+import com.tapestry.app.entities.User;
 
 
 
@@ -14,16 +15,14 @@ public class BasicAuthenticator implements Authenticator{
 	public static final String AUTH_TOKEN = "authToken";
 	
 	@Inject
-	private AdminDAO dao;
+	private MisDAO dao;
 	
 	@Inject
 	private Request request;
 	
 	public void login(String username, String password) throws AuthenticationException{
 		
-		User user = dao.findUniqueWithNamedQuery(User.BY_CREDENTIALS, QueryParameters.with(
-                "username",
-                username).and("password", password).parameters());
+		User user = (User)dao.findWithQuery(username);
 
         if (user == null) { throw new AuthenticationException("The user doesn't exist"); }
 

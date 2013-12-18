@@ -34,7 +34,7 @@ public class Pagination {
 		} catch (Exception e) {
 
 		}
-
+		
 		return totalRow;
 	}
 
