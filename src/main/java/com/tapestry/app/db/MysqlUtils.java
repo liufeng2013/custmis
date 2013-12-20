@@ -91,12 +91,13 @@ public class MysqlUtils {
 		while (rs.next()) {
 			ResultSetMetaData rsm = rs.getMetaData();
 
-			Map info = new LinkedHashMap(); // 使用LinkedHashMap确保字段顺序不变
+//			Map info = new LinkedHashMap(); // 使用LinkedHashMap确保字段顺序不变
+			List info = new ArrayList();
 			for (int i = 1; i <= rsm.getColumnCount(); i++) {
 				String name = rsm.getColumnName(i).toUpperCase();
 				int type = rsm.getColumnType(i);
-				info.put(name,
-						type == 2004 ? rs.getBlob(name) : rs.getString(name));
+				info.add(type == 2004 ? rs.getBlob(name) : rs.getString(name));
+//				info.put(name, type == 2004 ? rs.getBlob(name) : rs.getString(name));
 			}
 
 			list.add(info);

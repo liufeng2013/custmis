@@ -1,0 +1,33 @@
+<html t:type="layout" title="不同类型变量页面间传输1"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+	<form t:type="form" t:id="inputs">
+		<t:errors/>
+		<table>
+			<tr>
+				<td>Integer类型.</td>
+				<td><t:label for="integerField"/></td>
+				<td><input t:type="TextField" t:id="integerField" t:value="integerField"/></td>
+			</tr>
+			<tr>
+				<td>Long类型.</td>
+				<td><t:label for="longField"/></td>
+				<td><input t:type="TextField" t:id="longField" t:value="longField"/></td>
+			</tr>
+			<tr>
+				<td>Double类型.</td>
+				<td><t:label for="doubleField"/></td>
+				<td><input t:type="TextField" t:id="doubleField" t:value="doubleField"/></td>
+			</tr>
+			<tr>
+				<td>String类型.</td>
+				<td><t:label for="stringField"/></td>
+				<td><input t:type="TextField" t:id="stringField" t:value="stringField"/></td>
+			</tr>
+			<tr>
+				<td colspan="3"><input type="submit" value="传递"/></td>
+			</tr>
+		</table>
+	</form>
+</html>

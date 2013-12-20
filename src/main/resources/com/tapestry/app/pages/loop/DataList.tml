@@ -1,0 +1,15 @@
+<html t:type="layout" title="数据循环显示"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+	name<br/>
+	<t:loop source="oneLists" value="nameOne">
+		${nameOne}<br/>
+	</t:loop>
+	
+	<t:grid source="twoLists" add="name" row="nameTwo">
+		<p:NameCell>
+			${nameTwo}<br/>
+		</p:NameCell>
+	</t:grid>
+</html>

@@ -59,10 +59,9 @@ xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC
             </tr>
             <#list userlist as info>
             <tr>
-            	<#assign map = info>
-				<#list map?keys as key>
+				<#list info as temp>
 				<th style="text-align: left; font-size: 10pt; border-left: none;">
-                    ${map[key]}
+                    ${temp}
                 </th>
 				</#list>
             </tr>

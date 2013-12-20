@@ -1,0 +1,19 @@
+<html t:type="layout" title="不同类型变量页面间传输2"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+	<table>
+		<tr>
+			<td>integer类型：</td><td>${integerField}</td>
+		</tr>
+		<tr>
+			<td>long类型：</td><td>${longField}</td>
+		</tr>
+		<tr>
+			<td>double类型：</td><td>${doubleField}</td>
+		</tr>
+		<tr>
+			<td>string类型：</td><td>${stringField}</td>
+		</tr>
+	</table>
+</html>
