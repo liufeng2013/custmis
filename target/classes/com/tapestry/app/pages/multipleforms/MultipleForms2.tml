@@ -1,0 +1,7 @@
+<html t:type="layout" title="多表单2"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	${yourSearch}<br/><br/>
+	<a t:type="pagelink" t:page="multipleforms/multipleforms1" href="#">返回</a>
+</html>

@@ -1,0 +1,21 @@
+<html t:type="layout" title="多提交按钮1"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<form t:type="form" t:id="search" style="border:medium solid gray">
+		<t:errors/>
+		<table>
+			<tr>
+				<td>名字：</td>
+				<td><input t:type="TextField" t:id="name" t:validate="required,maxlength=10" size="10"/></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" value="Search Customers"/>
+					<input t:type="Submit" t:id="suppliers" value="Search Suppliers"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+</html>

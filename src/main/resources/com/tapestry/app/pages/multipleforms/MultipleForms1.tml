@@ -1,0 +1,18 @@
+<html t:type="layout" title="多表单1"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<form t:type="form" t:id="searchcustomers" style="border:medium solid gray">
+		<t:errors/>
+		Customer Name:
+		<input t:type="TextField" t:id="customerName" t:validate="required,maxlength=10" size="10"/>
+		<input type="submit" value="Search Customers"/>
+	</form>
+	<br/>
+	<form t:type="form" t:id="searchsuppliers" style="border:medium solid gray">
+		<t:errors/>
+		Supplier Name:
+		<input t:type="TextField" t:id="supplierName" t:validate="required,maxlength=10" size="10"/>
+		<input type="submit" value="Search Suppliers"/>
+	</form>
+</html>

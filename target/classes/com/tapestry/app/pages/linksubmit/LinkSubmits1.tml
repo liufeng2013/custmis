@@ -1,0 +1,29 @@
+<html t:type="layout" title="LinkSubmit"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	${selectName}
+	<form t:type="form" t:id="names" style="border: medium solid gray">
+		<t:errors/>
+		<table>
+			<tr>
+				<td>姓：</td>
+				<td>
+					<input t:type="TextField" t:id="firstName" t:validate="required"/>
+				</td>
+			</tr>
+			<tr>
+				<td>名：</td>
+				<td>
+					<input t:type="TextField" t:id="lastName" t:validate="required"/>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<t:linksubmit t:id="newlinksubmit">提交显示姓名</t:linksubmit>
+				</td>
+			</tr>
+		</table>
+	</form>
+</html>
