@@ -1,0 +1,10 @@
+<html t:type="layout" title="JS2"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<form t:type="form" t:autofocus="false">
+		<input t:type="TextField" t:id="firstName"/>
+		<input t:type="TextField" t:id="lastName"/>
+		<br/>
+	</form>
+</html>

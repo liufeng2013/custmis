@@ -1,0 +1,28 @@
+<html t:type="layout" title="Person Grid"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<t:form t:id="personForm">
+		<t:errors/>
+		<p> 版本 (version) ： 
+			<t:textfield  t:id="version"  value="person.version" 
+				t:validate="required"/>
+		</p>
+		<p>姓(firstName)： 
+			<t:textfield t:id="firstName" value="person.firstName" 
+				t:validate="required"/>
+		</p>
+		<p> 名 (lastName) ： 
+			<t:textfield  t:id="lastName"  value="person.lastName" 
+				t:validate="required"/>
+		</p>
+		<p> 地区 (region) ： 
+			<t:select  t:id="region"  value="person.region" 
+				t:model="literal:深圳,北京" t:validate="required"/>
+		</p>
+		<p>
+			<input  type="submit"  value=" 创建 "/>
+			<!--  <t:pagelink page="crud/UserList">返回查看页面</t:pagelink> -->
+		</p>
+	</t:form>
+</html>

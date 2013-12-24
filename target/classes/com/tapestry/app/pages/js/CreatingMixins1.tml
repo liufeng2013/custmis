@@ -1,0 +1,20 @@
+<html t:type="layout" title="JSMixinCount"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<form t:type="form" t:id="plainForm">
+		<div style="padding: 20px 50px;">
+			<input t:type="submit" value="Order 1 Apple"/>
+			<a t:type="eventlink" t:event="orderOneOrange" href="#">Order 1 Orange</a>
+			<a t:type="actionlink" t:id="orderOneBanana" href="#">Order 1 Banana</a>
+		</div>
+	</form>
+	
+	<form t:type="form" t:id="mixinForm" t:clientValidation="blur">
+		<div style="padding: 20px 50px;">
+			<input t:type="submit" value="Order 1 Apple" t:mixins="clickonce"/>
+			<a  t:type="eventlink"  t:event="orderOneOrange"  t:mixins="clickonce" href="#">Order 1 Orange</a>
+			<a  t:type="actionlink"  t:id="orderOneBananaWithMixin" t:mixins="clickonce" href="#">Order 1 Banana</a>
+		</div>
+	</form>
+</html>

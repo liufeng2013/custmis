@@ -1,0 +1,40 @@
+<html t:type="layout" title="Select"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<form t:type="form">
+		This example demonstrates labelling the blank option.<br/><br/>
+		
+		<t:label for="color0"/>:
+		<select t:type="select" t:id="color0" t:model="literal:Red,Yellow,Blue" t:blankLabel="Choose..."></select>
+		<input type="submit" value="Submit"/>
+		You chose:${color0}
+	</form><br/>
+	
+	<form t:type="form">
+		This example demonstrates labelling the blank option using the page's properties file.<br/><br/>
+		
+		<t:label for="color1"/>:
+		<select t:type="select" t:id="color1" t:model="literal:Red,Yellow,Blue"></select>
+		<input type="submit" value="Submit"/>
+		You chose:${color1}
+	</form><br/>
+	
+	<form t:type="form">
+		This example demonstrates making it mandatory to make a choice.<br/><br/>
+		
+		<t:label for="color2"/>:
+		<select t:type="select" t:id="color2" t:model="literal:Red,Yellow,Blue" t:validate="required"></select>
+		<input type="submit" value="Submit"/>
+		You chose:${color2}
+	</form><br/>
+	
+	<form t:type="form">
+		This example demonstrates making it mandatory to make a choice - but it also has a blank option.<br/><br/>
+		
+		<t:label for="color3"/>:
+		<select t:type="select" t:id="color3" t:model="literal:Red,Yellow,Blue" t:validate="required" t:blankOption="ALWAYS"></select>
+		<input type="submit" value="Submit"/>
+		You chose:${color3}
+	</form><br/>
+</html>

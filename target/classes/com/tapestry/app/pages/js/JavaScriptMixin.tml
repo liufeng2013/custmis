@@ -1,0 +1,12 @@
+<html t:type="layout" title="JSMixin"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<form t:type="form" t:autofocus="false">
+		<input  t:type="TextField"  t:id="firstName"  t:mixins="TextboxHint" 
+			t:hintText="Enter First Name" t:hintColor="#ff6600"/>
+		<input  t:type="TextField"  t:id="lastName"  t:mixins="TextboxHint" 
+			t:hintText="Enter Last Name" t:hintColor="#808080"/>
+		<br/>
+	</form>
+</html>

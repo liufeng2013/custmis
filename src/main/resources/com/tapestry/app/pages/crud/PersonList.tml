@@ -1,0 +1,20 @@
+<html t:type="layout" title="Person Grid"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<style>
+	.table{border-collapse: collapse; }
+	.table td,table th{border:1px solid #999; padding:5px;"}
+	</style>
+	<t:pagelink page="crud/PersonCreate">添加用户</t:pagelink>
+	<br/>
+	<br/>
+	<t:grid  t:include="id,version,firstName,lastName,region,startDate" 
+		t:source="persons" t:row="person" t:pagerPosition="top" t:rowsPerPage="1" 
+		t:add="action" class="table">
+		<p:actionCell>
+			<t:pagelink  page="crud/PersonUpdate"  t:context="${person.id}">修改</t:pagelink>
+			<t:eventlink t:event="delete" t:context="${person.id}">删除</t:eventlink>
+		</p:actionCell>
+	</t:grid>
+</html>

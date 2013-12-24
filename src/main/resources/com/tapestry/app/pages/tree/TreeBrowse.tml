@@ -1,0 +1,13 @@
+<html t:type="layout" title="树形组件"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<div style="margin: 20px;">
+		<a  t:type="eventlink"  t:event="clearExpansions">Clear Expansions</a>
+		<br/>
+		<br/>
+		<t:tree t:id="tree" model="stuffModel"/>
+		<br/> 
+		<a t:type="pagelink" t:page="tree/TreeBrowse" href="#">Refresh</a>
+	</div>
+</html>

@@ -1,0 +1,28 @@
+<html t:type="layout" title="DelegateAndBlocks"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<t:delegate to="block:blockA"/>
+	<t:delegate to="block:blockB"/>
+	<t:delegate to="block:blockC"/>
+	<t:delegate to="block:blockB"/>
+	<t:delegate to="block:blockA"/><br/>
+	
+	<t:block id="blockA">
+		<div style="margin:2px; padding:10px;background-color:#f8f8f8;">
+			This is block A.
+		</div>
+	</t:block>
+	
+	<t:block id="blockB">
+		<div style="margin:2px; padding:10px;background-color:#f0f0f0;">
+			This is block B.
+		</div>
+	</t:block>
+	
+	<t:block id="blockC">
+		<div style="margin:2px; padding:10px;background-color:#e8e8e8;">
+			This is block C.
+		</div>
+	</t:block>
+</html>

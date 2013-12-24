@@ -1,0 +1,9 @@
+<html t:type="layout" title="JS0"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<form t:type="form">
+		First name: <input t:type="TextField" t:id="firstName"/>
+		<br/>
+	</form>
+</html>

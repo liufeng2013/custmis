@@ -1,0 +1,14 @@
+<html t:type="layout" title="JS动画"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+	
+	<div id="expando" style="padding: 10px; background-color: #eeeeee;">
+		<form t:type="form" t:autofocus="false">
+			<input  t:type="TextField"  t:id="firstName"  t:mixins="TextboxHint" 
+				t:hintText="Enter First Name" t:hintColor="#808080"/>
+			<input  t:type="TextField"  t:id="lastName"  t:mixins="TextboxHint" 
+				t:hintText="Enter Last Name" t:hintColor="#808080"/>
+			<br/>
+		</form>
+	</div>
+</html>

@@ -1,0 +1,9 @@
+<html t:type="layout" title="JSMixinCount"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<div style="padding: 20px 50px;">
+	You  have  ordered  ${myOrder.applesQuantity}  apples, 
+	${myOrder.orangesQuantity} oranges, ${myOrder.bananasQuantity} bananas.
+	</div>
+</html>

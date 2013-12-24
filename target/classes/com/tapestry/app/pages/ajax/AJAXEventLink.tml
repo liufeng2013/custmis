@@ -1,0 +1,17 @@
+<html t:type="layout" title="AJAXEventLink"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<div style="margin-left: 50px">
+		<a t:type="eventlink" t:event="refreshPage" href="#">页面需要刷新</a>
+		<br/>
+		<a t:type="eventlink" t:event="refreshZone" href="#" t:zone="time2Zone">页面无刷新</a>
+		<br/>
+		<br/>
+		serverTime1: ${serverTime1}
+		<t:zone t:id="time2Zone">
+			serverTime2: ${serverTime2} 
+		</t:zone>
+		<br/>
+	</div>
+</html>

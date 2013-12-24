@@ -1,0 +1,17 @@
+<html t:type="layout" title="ZoneWithoutYellowHighlight"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+	
+	<div style="margin-left: 50px">
+		<a  t:type="actionlink"  t:id="refreshPage"  href="#">ActionLink 刷 新 页 面</a>
+		<br/>
+		<a  t:type="actionlink"  t:id="refreshZone"  href="#" t:zone="time2Zone">ActionLink AJAX 无刷新</a>
+		<br/>
+		<br/>
+		serverTime1: ${serverTime1}
+		<t:zone t:id="time2Zone" t:update="show">
+			serverTime2: ${serverTime2}
+		</t:zone>
+		<br/>
+	</div>
+</html>
