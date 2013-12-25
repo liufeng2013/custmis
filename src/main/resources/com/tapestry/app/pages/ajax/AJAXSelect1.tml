@@ -1,0 +1,18 @@
+<html t:type="layout" title="AJAXSelect1"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<form t:type="form" t:id="searchCriteria">
+		<t:label for="areaMake"/>:
+		<select  t:type="select"  t:id="areaMake"  t:model="areaMakes" t:zone="cithModelZone" t:blankOption="ALWAYS" t:blankLabel="请选择" t:validate="required"/>
+		<t:zone t:id="cithModelZone" id="cithModelZone" style="display: inline;">
+			<t:label for="cithModel"/>:
+			<select t:type="select" t:id="cithModel" t:model="cithModels" t:blankOption="ALWAYS" t:blankLabel="请选择" t:validate="required"/>
+		</t:zone>
+		说明: <input t:type="TextField" t:id="keywords"/> (optional)
+		<br/> 
+		<input type="submit" value="提交"/>
+		<t:errors/>
+	</form>
+	<br/>
+</html>

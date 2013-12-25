@@ -1,0 +1,51 @@
+<html t:type="layout" title="AJAX表单验证1"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<div style="margin: 20px;">
+		<form t:type="CustomForm" t:id="inputs">
+			<t:errors/>
+			<table>
+				<tr>
+					<td>
+						<t:label for="firstName"/>:
+					</td>
+					<td>
+						<input  t:type="TextField"  t:id="firstName"  t:validate="required, maxlength=10" size="10" t:mixins="ajaxValidator"/>
+					</td>
+					<td>(required, maxLength=10, new name only)</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td colspan="2">
+						<t:customerror for="firstName"/>
+					</td>
+				</tr>
+				<tr> 
+					<td>
+						<t:label for="lastName"/>:
+					</td>
+					<td>
+						<input  t:type="TextField"  t:id="lastName"  t:validate="required, maxLength=10" size="10"/>
+					</td>
+					<td>(required, maxLength=10, new name only)</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td colspan="2">
+						<t:customerror for="lastName"/>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="submit" value="Display"/>
+					</td>
+					<td></td>
+				</tr>
+			</table>
+		</form>
+		<br/>
+		<table  t:type="grid"  t:source="persons"  t:row="var:person" include="firstName,lastName">[Grid here]</table>
+	</div>
+</html>

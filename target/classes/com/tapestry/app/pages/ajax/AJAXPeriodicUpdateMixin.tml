@@ -1,0 +1,11 @@
+<html t:type="layout" title="AJAX混合周期性更新"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+	
+	<div style="margin-left: 50px">
+		<t:zone  t:id="timeZone"  t:mixins="PeriodicZoneUpdater" t:event="refreshTimeZone" t:frequencySecs="3" t:maxUpdates="4">
+			serverTime: ${serverTime}
+		</t:zone>
+	</div>
+	<br/>
+</html>

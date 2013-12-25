@@ -1,0 +1,11 @@
+<html t:type="layout" title="页面加载等待过程组件"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+	
+	<t:ProgressiveDisplay t:id="showThings" style="margin-left: 10px;">
+		<div t:type="Loop" t:source="things" t:value="thing">
+			${thing}
+		</div>
+	</t:ProgressiveDisplay>
+	<br/> 
+</html>

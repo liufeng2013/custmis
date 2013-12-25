@@ -21,6 +21,7 @@ import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.RequestFilter;
 import org.apache.tapestry5.services.RequestHandler;
 import org.apache.tapestry5.services.Response;
+import org.apache.tapestry5.spring.SpringModule;
 import org.apache.tapestry5.upload.services.UploadModule;
 import org.apache.tapestry5.upload.services.UploadSymbols;
 import org.slf4j.Logger;
@@ -31,7 +32,7 @@ import com.tapestry.app.security.AuthenticationFilter;
  * This module is automatically included as part of the Tapestry IoC Registry, it's a good place to
  * configure and extend Tapestry, or to place your own service definitions.
  */
-@SubModule({HibernateModule.class, HibernateCoreModule.class, UploadModule.class})
+@SubModule({HibernateModule.class, HibernateCoreModule.class, UploadModule.class, SpringModule.class})
 public class AppModule
 {
     public static void bind(ServiceBinder binder)

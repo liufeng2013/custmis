@@ -1,0 +1,8 @@
+<html  t:type="layout"  title="Error404" 
+	t:sidebarTitle="Framework Version" 
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" 
+	xmlns:p="tapestry:parameter">
+	
+	<h1>Page or resource not found.</h1>
+	<t:renderobject object="request"/> 
+</html>

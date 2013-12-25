@@ -1,0 +1,12 @@
+<html t:type="layout" title="AJAX周期性更新"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+	
+	<div style="margin-left: 50px">
+		<a  t:type="eventlink"  t:id="refreshTimeZone"  href="#"  t:zone="timeZone" style="display: none;">Hidden EventLink</a>
+		<t:zone t:id="timeZone">
+			serverTime: ${serverTime}
+		</t:zone>
+		<br/>
+	</div>
+</html>

@@ -1,0 +1,9 @@
+<html t:type="layout" title="上传组件2"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+	
+	<form  action="UploadTypeFile/to/"  method="post" enctype="multipart/form-data" >   
+		<input type="file" name="filename"/> 
+		<input type="submit" value="Submit" /> 
+	</form>
+</html>

@@ -1,0 +1,13 @@
+<html t:type="layout" title="上传组件配置"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+	
+	文件路径：${dataUrl}<br/>
+	<t:form t:id="uploadForm">
+		<t:errors/>
+		<input  t:type="upload"  t:id="file"  t:value="file" validate="required"/>
+		<span style="color:red">${tooBig}</span>
+		<br/>
+		<input type="submit" value="上传"/>
+	</t:form>
+</html>

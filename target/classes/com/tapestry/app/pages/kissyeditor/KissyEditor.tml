@@ -1,0 +1,12 @@
+<html t:type="layout" title="KissyEditor"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+	
+	<link  href="${context:assets/build/theme/base-min.css}" rel="stylesheet"/>
+	<link  href="${context:assets/build/theme/cool/editor-pkg-sprite-min.css}"  id="cssLink" rel="stylesheet"/>
+	<t:form>
+		<t:textarea t:id="editor" tabindex="0" value="content" style="height:260px; width:100%"></t:textarea>
+		<input type="submit" value="提交"/>
+	</t:form>
+	<t:OutputRaw value="content"></t:OutputRaw>
+</html>

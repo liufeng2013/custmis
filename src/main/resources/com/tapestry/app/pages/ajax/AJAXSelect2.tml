@@ -1,0 +1,6 @@
+<html t:type="layout" title="AJAXSelect2"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	您选择的地区是: ${areaMake} ${cithModel} ${keyWords}!<br/><br/>
+</html>

@@ -1,0 +1,23 @@
+<html t:type="layout" title="AJAXFormMultipleZoneUpdate"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<t:zone t:id="formZone" id="formZone">
+		<form t:id="ajaxForm" t:type="form" t:zone="formZone" style="border: 2px solid #eee; padding: 15px">
+			姓: <input t:type="TextField" t:id="firstName"/>
+			<br/>
+			名: <input t:type="TextField" t:id="lastName"/>
+			<br/>
+			生日: <input t:type="datefield" t:id="birthday"/>
+			<br/>
+			<br/>
+			<input type="submit" value="提交"/>
+			<br/>
+			<br/>
+			<t:errors/>
+		</form>
+	</t:zone>
+	<t:zone t:id="outZone" id="outZone" style="border: 2px solid #eee; padding: 15px">
+		欢迎   ${name}.  你 的 生 日 是   <t:output  t:format="birthdayFormat" value="birthday"/>
+	</t:zone>
+</html>
