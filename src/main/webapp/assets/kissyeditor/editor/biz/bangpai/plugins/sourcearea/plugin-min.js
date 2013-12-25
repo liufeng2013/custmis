@@ -1,0 +1,1 @@
+KISSY.Editor.add("bangpai-sourcearea",function(a){var b=KISSY.Editor;KISSY.UA.gecko<1.92||b.use("bangpai-sourcearea/support",function(){var c=new b.BangPaiSourceArea(a);a.on("destroy",function(){c.destroy()})})},{attach:false});

@@ -7,13 +7,13 @@ import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.javascript.JavaScriptSupport;
 
-@Import(library = { "context:assets/build/kissy-min.js",
-		"context:assets/build/uibase/uibase-pkg-min.js",
-		"context:assets/build/dd/dd-pkg-min.js",
-		"context:assets/build/overlay/overlay-pkg-min.js",
-		"context:assets/build/editor-all-pkg-min.js",
-		"context:assets/build/biz/ext/editor-plugin-pkg-min.js",
-		"context:assets/build/TEstart.js" })
+@Import(library = { "context:assets/kissyeditor/kissy-min.js",
+		"context:assets/kissyeditor/uibase/uibase-pkg-min.js",
+		"context:assets/kissyeditor/dd/dd-pkg-min.js",
+		"context:assets/kissyeditor/overlay/overlay-pkg-min.js",
+		"context:assets/kissyeditor/editor-all-pkg-min.js",
+		"context:assets/kissyeditor/biz/ext/editor-plugin-pkg-min.js",
+		"context:assets/kissyeditor/TEstart.js" })
 public class KissyEditor {
 	@Inject
 	private JavaScriptSupport javaScriptSupport;

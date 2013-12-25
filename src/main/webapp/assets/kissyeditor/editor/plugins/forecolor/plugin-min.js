@@ -1,0 +1,1 @@
+KISSY.Editor.add("forecolor",function(a){var b=KISSY.Editor.ColorSupport,c={element:"span",styles:{color:"#(color)"},overrides:[{element:"font",attributes:{color:null}}]};a.addPlugin(function(){new b({editor:a,styles:c,title:"\u6587\u672c\u989c\u8272",contentCls:"ke-toolbar-color",text:"color"})})});
